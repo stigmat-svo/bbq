@@ -107,6 +107,7 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     rack (2.2.2)
     rack-proxy (0.6.5)
       rack
@@ -187,6 +188,7 @@ DEPENDENCIES
   devise
   jquery-rails
   listen
+  pg
   rails (~> 6.0.3, >= 6.0.3.1)
   rails-i18n
   sqlite3 (~> 1.4)
