@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'webpacker', '~> 4.0'
 gem 'bootsnap'
 gem 'listen'
+gem 'devise'
+gem 'rails-i18n'
 
 
 group :development, :test do
