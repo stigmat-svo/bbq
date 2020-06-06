@@ -27,7 +27,7 @@
 
     <%= link_to image_tag("ok.png"), root_path, class: "my-brand" %>
 
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <div class="my-nav navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to 'Профиль', current_user %></li>

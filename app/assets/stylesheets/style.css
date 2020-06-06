@@ -1,11 +1,7 @@
 .my-nav {
   background-color: transparent;
-  border-bottom: none;
+  border: none;
   padding: 10px;
-}
-
-.my-li {
-  color: #B00100;
 }
 
 .my-brand {
