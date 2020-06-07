@@ -2,7 +2,7 @@
   <h1><%= @user.name %></h1>
   <div>&nbsp;</div>
 
-  <%= image_tag user_avatar(@user), class: "img-fluid rounded-circle" %>
+  <%= image_tag user_avatar(@user), class: "img-fluid round" %>
 
   <% if @user == current_user %>
     <p class="buffer-top"><%= link_to 'Редактировать профиль',
