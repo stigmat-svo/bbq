@@ -1,5 +1,5 @@
 <%= form_with(model: @user, local: true, multipart: true) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+  <%= render partial: 'partials/form_errors', locals: {model: @user}, class: "alert alert-danger", role: "alert" %>
 
   <div class="form-group">
     <%= f.label 'Имя:' %>

@@ -1,5 +1,5 @@
 <%= form_for(@event) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+  <%= render partial: 'partials/form_errors', locals: {model: @event}, class: "alert alert-danger", role: "alert" %>
 
   <div class="form-group">
     <%= f.label 'Название события:' %>
