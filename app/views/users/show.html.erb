@@ -1,11 +1,13 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
+  <div>&nbsp;</div>
 
   <%= image_tag user_avatar(@user), class: "img-fluid rounded-circle" %>
 
   <% if @user == current_user %>
     <p class="buffer-top"><%= link_to 'Редактировать профиль',
-                                      edit_user_path(@user), class: 'btn btn-default' %></p>
+                                      edit_user_path(@user), class: 'btn btn-primary' %></p>
+    <%= link_to 'Вернуться', root_path, class: 'btn btn-default' %>
   <% end %>
 
   <div class="row">
