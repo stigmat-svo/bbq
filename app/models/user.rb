@@ -11,6 +11,6 @@ class User < ApplicationRecord
   private
 
   def set_name
-	  self.name = "Здесь должно быть ваше имя" if self.name.blank?
+	  self.name = "Ваше имя" if self.name.blank?
   end
 end
