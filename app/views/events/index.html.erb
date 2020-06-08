@@ -1,8 +1,15 @@
-<h1>Добро пожаловать. Создайте своё мероприятие!</h1>
-
-<div class="buffer-both">
-  <%= link_to 'Создать событие', new_event_path, class: 'btn btn-success' %>
+<div class="text-center">
+  <h1>Добро пожаловать в <span class="pp">PARTY POINT</span>!</h1>
+  <h2>Создайте своё мероприятие!</h2>
+  <div class="buffer-both">
+    <%= link_to 'Создать событие', new_event_path, class: 'btn btn-success' %>
+  </div>
 </div>
+
+<div>&nbsp;</div>
+
+
+<div>&nbsp;</div>
 
 <div class="row buffer-bottom">
   <%= render partial: 'events/event', collection: @events %>
