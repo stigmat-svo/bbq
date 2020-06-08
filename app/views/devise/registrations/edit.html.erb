@@ -1,4 +1,4 @@
-<h1>Редактировать профиль <%= "'#{@user.name}'" %></h1>
+<h1>Редактировать профиль <%= @user.name %></h1>
 <div>&nbsp;</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
@@ -33,11 +33,13 @@
 
   <div class="actions">
     <%= f.submit "Сохранить", class: 'btn btn-primary' %>
-    <%= button_to "Удалить аккаунт",
-                  registration_path(resource_name), data: {confirm: "Вы уверены?"},
-                  method: :delete, class: 'btn btn-danger buffer-right' %>
   </div>
 <% end %>
+<div class="buffer-right">
+    <%= button_to "Удалить аккаунт",
+                  registration_path(resource_name), data: {confirm: "Вы уверены?"},
+                  method: :delete, class: 'btn btn-danger' %>
+  </div>
 <div>&nbsp;</div>
 
 <%= link_to "Назад", :back, class: 'btn btn-default' %>

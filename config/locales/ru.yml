@@ -16,9 +16,9 @@ ru:
         description: 'Описание:'
       validates:
         error:
-          one: 'Найдено: %{count} ошибка.'
-          few: 'Найдено: %{count} ошибки.'
-          many: 'Найдено: %{count} ошибок.'
+          one: 'Найдена %{count} ошибка.'
+          few: 'Найдены %{count} ошибки.'
+          many: 'Найдено %{count} ошибок.'
   controllers:
     events:
       created: 'Событие успешно создано!'
