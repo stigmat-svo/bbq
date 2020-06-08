@@ -8,7 +8,7 @@
   <title><%= content_for?(:title) ? yield(:title) : "PARTY  POINT" %></title>
   <style>
     body {
-      background: url(<%= asset_path 'bg2.jpg' %>) no-repeat fixed center / cover;
+      background: url(<%= "#{asset_path 'bg2.jpg'}" %>) no-repeat fixed center / cover;
     }
   </style>
   <%= csrf_meta_tags %>
