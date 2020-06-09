@@ -1,45 +1,45 @@
-<h1>Редактировать профиль <%= @user.name %></h1>
-<div>&nbsp;</div>
+<div class="col-md-6">
+  <h1>Редактировать профиль <%= @user.name %></h1>
+  <div>&nbsp;</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource, class: "alert alert-danger", role: "alert" %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource, class: "alert alert-danger", role: "alert" %>
 
-  <div class="form-group">
-    <%= f.label 'E-mail:' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
-  </div>
+    <div class="form-group">
+      <%= f.label 'E-mail:' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>В настоящее время ожидается подтверждение для:<%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label 'Новый пароль:' %> <i>(Оставьте пустым, если вы не хотите его менять)</i><br/>
-    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
-    <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> символов минимум</em>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>В настоящее время ожидается подтверждение для:<%= resource.unconfirmed_email %></div>
     <% end %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label 'Повторите пароль:' %><br/>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
-  </div>
+    <div class="form-group">
+      <%= f.label 'Новый пароль:' %> <i>(Оставьте пустым, если вы не хотите его менять)</i><br/>
+      <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+      <% if @minimum_password_length %>
+        <em><%= @minimum_password_length %> символов минимум</em>
+      <% end %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label 'Старый пароль:' %> <i>(Нам нужен ваш текущий пароль для подтверждения ваших изменений)</i><br/>
-    <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
-  </div>
+    <div class="form-group">
+      <%= f.label 'Повторите пароль:' %><br/>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Сохранить", class: 'btn btn-primary' %>
-  </div>
-<% end %>
-<div class="buffer-right">
-    <%= button_to "Удалить аккаунт",
-                  registration_path(resource_name), data: {confirm: "Вы уверены?"},
-                  method: :delete, class: 'btn btn-danger' %>
-  </div>
-<div>&nbsp;</div>
+    <div class="form-group">
+      <%= f.label 'Старый пароль:' %> <i>(Нам нужен ваш текущий пароль для подтверждения ваших изменений)</i><br/>
+      <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
+    </div>
 
-<%= link_to "Назад", :back, class: 'btn btn-default' %>
+    <div class="actions">
+      <%= f.submit "Сохранить", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  <%= button_to "Удалить аккаунт",
+                registration_path(resource_name), data: {confirm: "Вы уверены?"},
+                method: :delete, class: 'btn btn-danger buffer-both' %>
+
+  <div>&nbsp;</div>
+  <%= link_to "Назад", :back, class: 'btn btn-default' %>
+</div>
