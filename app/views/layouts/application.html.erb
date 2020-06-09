@@ -4,13 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic&display=swap" rel="stylesheet">
   <title><%= content_for?(:title) ? yield(:title) : "PARTY  POINT" %></title>
   <style>
     body {
       background: url(<%= asset_path 'bg2.jpg' %>) no-repeat fixed center / cover;
     }
   </style>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic&display=swap" rel="stylesheet">
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag "application", :media => "all" %>

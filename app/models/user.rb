@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :events, dependent: :destroy
+  has_many :comments
 
   validates :name, presence: true, length: {maximum: 40}
 
@@ -11,6 +12,6 @@ class User < ApplicationRecord
   private
 
   def set_name
-    self.name = "Ваше имя" if name.blank?
+    self.name = "Посетитель" if name.blank?
   end
 end

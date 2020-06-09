@@ -26,7 +26,19 @@ ru:
       destroyed: 'Событие удалено.'
     users:
       updated: 'Данные пользователя успешно обновлены!'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
 
+
+
+  # Перевод названия приложения и компании-разработчика
   app:
-    name: 'PARTY POINT'
+    name: 'Party Point'
     company: 'stigmat'
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+
