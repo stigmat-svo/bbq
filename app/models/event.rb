@@ -1,9 +1,7 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   has_many :comments, dependent: :destroy
-  has_many :subscriptions, dependent: :destroy
-  has_many :subsribers, through: :subscriptions, source: :user
 
   validates :user, presence: true
 

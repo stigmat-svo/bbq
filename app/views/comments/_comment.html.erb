@@ -7,11 +7,11 @@
       <% else %>
         <em><strong><%= comment.user_name %></strong></em>
       <% end %>
-    </span>
-    <em><%= l comment.created_at, format: :short %></em>
+    </span>&nbsp;
+    <em><%= l comment.created_at, format: :short %></em>&nbsp;&nbsp;
     <% if current_user_can_edit?(comment) %>
-      <%= link_to 'Удалить', event_comment_path(comment.event, comment),
-                  method: :delete, data: {confirm: t('.destroy_confirm')}, class: 'btn-sm btn-danger btn-ml'
+      <%= link_to fa_icon('trash-o'), event_comment_path(comment.event, comment),
+                  method: :delete, data: {confirm: t('.destroy_confirm')}
       %>
     <% end %>
   </p>
