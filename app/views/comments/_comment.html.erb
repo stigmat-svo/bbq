@@ -1,5 +1,5 @@
 <div class="buffer-bottom">
-  <p><%= comment.body %></p>
+  <h4><%= comment.body %></h4>
   <p>
     <span>
       <% if comment.user.present? %>
@@ -8,7 +8,7 @@
         <em><strong><%= comment.user_name %></strong></em>
       <% end %>
     </span>&nbsp;
-    <em><%= l comment.created_at, format: :short %></em>&nbsp;&nbsp;
+    <em><%= l comment.created_at, format: :long %></em>&nbsp;&nbsp;
     <% if current_user_can_edit?(comment) %>
       <%= link_to fa_icon('trash-o'), event_comment_path(comment.event, comment),
                   method: :delete, data: {confirm: t('.destroy_confirm')}

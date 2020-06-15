@@ -34,9 +34,13 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+  form:
+    errors:
+      user_organizer: ' не может подписаться на собственное событие.'
+      email_already_exists: ' - это e-mail организатора!'
 
 
-  # Перевод названия приложения и компании-разработчика
+
   app:
     name: 'Party Point'
     company: 'stigmat'
