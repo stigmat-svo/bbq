@@ -37,7 +37,7 @@ ru:
   form:
     errors:
       user_organizer: ' не может подписаться на собственное событие.'
-      email_already_exists: ' - это e-mail организатора!'
+      email_already_exists: ' - уже существует!'
 
 
 
