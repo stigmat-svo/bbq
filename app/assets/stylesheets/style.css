@@ -17,6 +17,31 @@
   border-radius: 50%;
 }
 
+.btn-my {
+  border: 1px solid #a1a1a1;
+  color: #428bca;
+}
+
+.btn-my-del {
+  background-color: #ffcbcc;
+  border: 1px solid #a1a1a1;
+  color: #428bca;
+}
+
+.btn-my:hover {
+  background-color: #89beff;
+  color: white;
+  -webkit-transition: background-color ease 0.6s;
+  transition: background-color ease 0.6s;
+}
+
+.btn-my-del:hover {
+  background-color: #ff99a3;
+  color: white;
+  -webkit-transition: background-color ease 0.6s;
+  transition: background-color ease 0.6s;
+}
+
 .btn-ml {
   margin-left: 10px;
 }
@@ -24,4 +49,23 @@
 .pp {
   color: #428bca;
   font-family: 'Montserrat', sans-serif;
+}
+
+.pad {
+  padding: 15px;
+}
+
+.my-top {
+  margin-top: 20px;
+}
+
+.my-border {
+  border: 1px solid black;
+}
+
+.my-comment {
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
 }

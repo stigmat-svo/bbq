@@ -28,7 +28,8 @@
 }
 
 .event-description a {
-  color: #d0d0ff;
+  color: #b3e9ff;
+  text-decoration: none;
 }
 
 .event-description small {
