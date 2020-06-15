@@ -40,7 +40,6 @@ ru:
       email_already_exists: ' - уже существует!'
 
 
-
   app:
     name: 'Party Point'
     company: 'stigmat'

@@ -43,7 +43,7 @@ class Subscription < ApplicationRecord
 
   def email_already_exists
     if User.find_by(email: user_email)
-      errors.add('Выбранный e-mail', I18n.t('form.errors.email_already_exists'))
+      errors.add(user_email, I18n.t('form.errors.email_already_exists'))
     end
   end
 end
