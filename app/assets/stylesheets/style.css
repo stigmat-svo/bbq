@@ -64,17 +64,8 @@
   background-color: rgba(255,255,255,0.4);
 }
 
-.my-subscribe {
-  width: 85%;
-  padding: 10px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0px 0px 33px -3px rgba(178,202,232,1);
-  -moz-box-shadow: inset 0px 0px 33px -3px rgba(178,202,232,1);
-  box-shadow: inset 0px 0px 33px -3px rgba(178,202,232,1);
-}
-
-.my-toggle {
-  color: white;
+.my-flash {
+  font-size: 120%;
 }
 
 .user-avatar .img-icon {

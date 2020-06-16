@@ -61,20 +61,24 @@
 
   <div class="row">
     <div class="col-md-6 ">
-      <div class="event-comments">
 
-        <%= render partial: 'comments/form',
-                   locals: {comment: @new_comment || @event.comments.build} %>
+
+      <%= render partial: 'comments/form',
+                 locals: {comment: @new_comment || @event.comments.build} %>
+      <div id="comments">
+        <h3>Комментарии:</h3>
+        <div class="buffer-both">
+          <%= render partial: 'comments/comment',
+                     collection: @event.comments.except(@new_comment) %>
+        </div>
       </div>
-      <h3>Комментарии:</h3>
-      <div class="buffer-both">
-        <%= render partial: 'comments/comment',
-                   collection: @event.comments.except(@new_comment) %>
-      </div>
-    </div>
+      <button id="comment-on" class="btn btn-my buffer-top">Скрыть / Показать</button>
     </div>
 
-    <div class="col-md-6 ">
 
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
   </div>
+
+
 </div>

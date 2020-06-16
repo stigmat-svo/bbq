@@ -7,9 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require button
+//= require flash_out
 //= require_tree .
 
-$(function () {
-  setTimeout(() => bootstrap_flash.style.display = 'none', 2500)
-  return false;
-});

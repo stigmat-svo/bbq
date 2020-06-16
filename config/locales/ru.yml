@@ -5,16 +5,16 @@ ru:
       event: 'Событие'
     attributes:
       user:
-        email: 'E-mail:'
-        name: 'Имя:'
-        avatar: 'Загрузить аватар:'
-        password: 'Пароль:'
-        password_confirmation: 'Подтверждение пароля:'
+        email: 'E-mail'
+        name: 'Имя'
+        avatar: 'Загрузить аватар'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
       event:
-        title: 'Название события:'
-        address: 'Место проведения:'
-        datetime: 'Дата и время:'
-        description: 'Описание:'
+        title: 'Название события'
+        address: 'Место проведения'
+        datetime: 'Дата и время'
+        description: 'Описание'
       validates:
         error:
           one: 'Найдена %{count} ошибка.'
@@ -28,13 +28,13 @@ ru:
     users:
       updated: 'Данные пользователя успешно обновлены!'
     comments:
-      destroyed: 'Комментарий удален'
-      created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'
+      destroyed: 'Комментарий удален.'
+      created: 'Ваш комментарий добавлен.'
+      error: 'Ошибка с комментарием.'
     subscriptions:
-      created: 'Вы подписаны на это событие'
-      destroyed: 'Участник отписан'
-      error: 'Подписка/отписка не сработала'
+      created: 'Вы подписаны на это событие.'
+      destroyed: 'Участник отписан.'
+      error: 'Подписка/отписка не сработала.'
   form:
     errors:
       user_organizer: ' не может подписаться на собственное событие.'
