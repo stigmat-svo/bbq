@@ -7,6 +7,7 @@ ru:
       user:
         email: 'E-mail:'
         name: 'Имя:'
+        avatar: 'Загрузить аватар:'
         password: 'Пароль:'
         password_confirmation: 'Подтверждение пароля:'
       event:

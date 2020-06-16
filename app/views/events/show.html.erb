@@ -1,7 +1,7 @@
 <div class="event">
   <%= link_to 'На главную', root_path, class: 'btn btn-my' %>
   <div class="row pad">
-    <div class="col-md-6">
+    <div class="col-md-6 buffer-top">
       <%= content_tag 'div', '', class: 'event-background',
                       style: "background-image: url(#{asset_path('event.jpg')})" %>
 
@@ -29,14 +29,14 @@
       </div>
     </div>
 
-    <div class="col-md-3">
-      <div class="event-owner text-center">
+    <div class="col-md-3 my-top">
+      <div class="text-center">
         <h4>Приглашение от:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="event-subscriptions">
+    <div class="col-md-3 my-top">
+      <div class="text-center">
         <h4>На событие подписались:</h4>
         <div class="buffer-both">
           <p>
@@ -45,25 +45,21 @@
           </p>
         </div>
       </div>&nbsp;
-      <div class="event-subscription-form">
-        <% if current_user_can_edit?(@event) %>
-          <p></p>
-        <% else %>
+      <div class="">
+        <% unless current_user_can_edit?(@event) %>
           <div>
             <%= render partial: 'subscriptions/form', locals: {
                 subscription: @new_subscription || @event.subscriptions.build
             } %>
           </div>
+        <% else %>
+          <p></p>
         <% end %>
       </div>
     </div>
   </div>
 
-  <div class="row my-top">
-    <div class="col-md-6 ">
-
-    </div>
-
+  <div class="row">
     <div class="col-md-6 ">
       <div class="event-comments">
 
@@ -76,5 +72,9 @@
                    collection: @event.comments.except(@new_comment) %>
       </div>
     </div>
+    </div>
+
+    <div class="col-md-6 ">
+
   </div>
 </div>

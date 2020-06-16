@@ -1,19 +1,26 @@
-<%= form_for [@event, subscription] do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: subscription}, class: "alert alert-danger", role: "alert" %>
+<div class="text-center">
+  <%= form_for [@event, subscription] do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: subscription}, class: "alert alert-danger", role: "alert" %>
 
-  <% unless user_signed_in? %>
-    <div class="form-group">
-      <%= f.label 'Имя:' %>
-      <%= f.text_field :user_name, class: 'form-control' %>
-    </div>
+    <% unless user_signed_in? %>
+      <div class="form-group">
+        <%= f.label 'Имя:' %>
+        <%= f.text_field :user_name, class: 'form-control' %>
+      </div>
 
-    <div class="form-group">
-      <%= f.label 'E-mail:' %>
-      <%= f.text_field :user_email, class: 'form-control' %>
-    </div>
+      <div class="form-group">
+        <%= f.label 'E-mail:' %>
+        <%= f.text_field :user_email, class: 'form-control' %>
+      </div>
+    <% end %>
+
+    <% if @event.subscribers.include?(current_user) %>
+      <p></p>
+      <% else %>
+      <div class="actions">
+        <%= f.submit 'Подписаться', class: 'btn btn-my' %>
+      </div>
+    <% end %>
   <% end %>
+</div>
 
-  <div class="actions">
-    <%= f.submit 'Подписаться', class: 'btn btn-my' %>
-  </div>
-<% end %>

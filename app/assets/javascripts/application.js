@@ -8,3 +8,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(function () {
+  setTimeout(() => bootstrap_flash.style.display = 'none', 2500)
+  return false;
+});
