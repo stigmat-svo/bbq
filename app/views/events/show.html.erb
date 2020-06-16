@@ -46,11 +46,15 @@
         </div>
       </div>&nbsp;
       <div class="event-subscription-form">
-        <div>
-          <%= render partial: 'subscriptions/form', locals: {
-              subscription: @new_subscription || @event.subscriptions.build
-          } %>
-        </div>
+        <% if current_user_can_edit?(@event) %>
+          <p></p>
+        <% else %>
+          <div>
+            <%= render partial: 'subscriptions/form', locals: {
+                subscription: @new_subscription || @event.subscriptions.build
+            } %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -67,7 +71,6 @@
                    locals: {comment: @new_comment || @event.comments.build} %>
       </div>
       <h3>Комментарии:</h3>
-
       <div class="buffer-both my-comment">
         <%= render partial: 'comments/comment',
                    collection: @event.comments.except(@new_comment) %>
