@@ -1,7 +1,7 @@
 <%= form_for [@event, subscription] do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: subscription}, class: "alert alert-danger", role: "alert" %>
 
-  <% if user_signed_in? %>
+  <% if current_user_can_edit?(@event) %>
    <p></p>
   <% else %>
     <div class="form-group">
