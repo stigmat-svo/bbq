@@ -14,13 +14,9 @@
       </div>
     <% end %>
 
-    <% if @event.subscribers.include?(current_user) %>
-      <p></p>
-      <% else %>
-      <div class="actions">
-        <%= f.submit 'Подписаться', class: 'btn btn-my' %>
-      </div>
-    <% end %>
+    <div class="actions">
+      <%= f.submit 'Подписаться', class: 'btn btn-my' %>
+    </div>
   <% end %>
 </div>
 
