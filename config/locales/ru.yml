@@ -3,11 +3,12 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+
     attributes:
       user:
         email: 'E-mail'
         name: 'Имя'
-        avatar: 'Загрузить аватар'
+        avatar: 'Загрузите аватар в формате jpg, jpeg, gif, png:'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -20,6 +21,7 @@ ru:
           one: 'Найдена %{count} ошибка.'
           few: 'Найдены %{count} ошибки.'
           many: 'Найдено %{count} ошибок.'
+
   controllers:
     events:
       created: 'Событие успешно создано!'
@@ -35,6 +37,11 @@ ru:
       created: 'Вы подписаны на это событие.'
       destroyed: 'Участник отписан.'
       error: 'Подписка/отписка не сработала.'
+    photos:
+      error: 'Что-то не так с этой фотографией.'
+      created: 'Вы добавили фотографию к событию.'
+      destroyed: 'Фотография удалена.'
+
   form:
     errors:
       user_organizer: ' не может подписаться на собственное событие.'

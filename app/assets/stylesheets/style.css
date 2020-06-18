@@ -1,3 +1,7 @@
+.my-body {
+  height: 800px;
+}
+
 .my-nav {
   background-color: transparent;
   padding: 10px;
@@ -5,12 +9,13 @@
 }
 
 .my-brand {
-  float:left;
+  float: left;
 }
 
 .round {
   border-radius: 50%;
 }
+
 .round-sm {
   width: 50px;
   height: 50px;
@@ -19,20 +24,17 @@
 
 .btn-my {
   background-color: transparent;
-  border: 1px solid #a1a1a1;
+  border: 1px solid #89beff;
   color: #428bca;
-}
-
-.btn-my-del {
-  background-color: #ffcbcc;
-  border: 1px solid #a1a1a1;
-  color: #428bca;
+  font-weight: bold;
 }
 
 .btn-my:hover {
   background-color: #89beff;
   color: white;
   -webkit-transition: background-color ease 0.6s;
+  -moz-transition: background-color ease 0.6s;
+  -o-transition: background-color ease 0.6s;
   transition: background-color ease 0.6s;
 }
 
@@ -53,15 +55,22 @@
   margin-top: 20px;
 }
 
-.my-border {
-  border: 1px solid black;
+.my-topper {
+  border-bottom: 1px solid #89beff;
+  margin-top: 200px;
+}
+
+.my-map {
+  width: 573px;
+  height: 403px;
+  border: 1px solid #89beff;
 }
 
 .my-comment {
   border: 1px solid #CCCCCC;
   border-radius: 5px;
   padding-left: 10px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .my-flash {
@@ -73,3 +82,14 @@
   height: 30px;
 }
 
+@media all and (max-width: 480px) {
+  iframe {
+    width: 330px;
+    height: 300px;
+  }
+
+  .my-map {
+    width: 330px;
+    height: 300px;
+  }
+}

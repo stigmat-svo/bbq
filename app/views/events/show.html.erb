@@ -36,7 +36,16 @@
       </div>
     </div>
     <div class="col-md-3 my-top">
-      <div class="text-center">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 event-tools">
+      <button id="subscribe-on" class="btn btn-my buffer-top icon-lg" title="Подписаться">&nbsp;<%= fa_icon('thumbs-up') %>&nbsp;</button>
+      <button id="comment-on" class="btn btn-my buffer-top" title="Комментарии">&nbsp;<%= fa_icon('comments') %>&nbsp;</button>
+      <button id="gallery-on" class="btn btn-my buffer-top" title="Фотогалерея">&nbsp;<%= fa_icon('photo') %>&nbsp;</button>
+      <button id="map-on" class="btn btn-my buffer-top" title="Посмотреть на карте">&nbsp;<%= fa_icon('map') %>&nbsp;</button>
+      <div id="subscribe" class="buffer-both">
         <h4>На событие подписались:</h4>
         <div class="buffer-both">
           <p>
@@ -44,39 +53,53 @@
                        collection: @event.subscriptions.except(@new_subscription) %>
           </p>
         </div>
-      </div>&nbsp;
-      <div class="">
-        <% unless current_user_can_edit?(@event) || @event.subscribers.include?(current_user) %>
-          <div>
-            <%= render partial: 'subscriptions/form', locals: {
-                subscription: @new_subscription || @event.subscriptions.build
-            } %>
-          </div>
-        <% end %>
+        <div>
+          <% unless current_user_can_edit?(@event) || @event.subscribers.include?(current_user) %>
+            <div>
+              <%= render partial: 'subscriptions/form', locals: {
+                  subscription: @new_subscription || @event.subscriptions.build
+              } %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6 ">
-
-
-      <%= render partial: 'comments/form',
-                 locals: {comment: @new_comment || @event.comments.build} %>
       <div id="comments">
+        <%= render partial: 'comments/form',
+                   locals: {comment: @new_comment || @event.comments.build} %>
+
         <h3>Комментарии:</h3>
         <div class="buffer-both">
           <%= render partial: 'comments/comment',
                      collection: @event.comments.except(@new_comment) %>
         </div>
       </div>
-      <button id="comment-on" class="btn btn-my buffer-top">Скрыть / Показать</button>
+
+      <div id="gallery">
+        <div class="event-photos-gallery">
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+
+        <div class="event-photo-form">
+          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+        </div>
+      </div>
+
+      <div class="container buffer-both">
+        <div class="row">
+          <div id="map">
+            <iframe class="my-map" src="https://yandex.ua/map-widget/v1/?um=constructor%3A1f1afa66648866f701cc2842607ae8124ed20e95aff59eca71a0ae9fef3691de&amp;
+        source=constructor" width="570" height="400" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
     <div class="col-md-3"></div>
-    <div class="col-md-3"></div>
+    <div class="col-md-3">
+    </div>
+
   </div>
-
-
 </div>
+

@@ -7,7 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require button
+//= require togglers.js
 //= require flash_out
 //= require_tree .
 
