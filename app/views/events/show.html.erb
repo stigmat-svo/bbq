@@ -41,10 +41,10 @@
 
   <div class="row">
     <div class="col-md-6 event-tools">
-      <button id="subscribe-on" class="btn btn-my buffer-top icon-lg" title="Подписаться">&nbsp;<%= fa_icon('thumbs-up') %>&nbsp;</button>
-      <button id="comment-on" class="btn btn-my buffer-top" title="Комментарии">&nbsp;<%= fa_icon('comments') %>&nbsp;</button>
-      <button id="gallery-on" class="btn btn-my buffer-top" title="Фотогалерея">&nbsp;<%= fa_icon('photo') %>&nbsp;</button>
-      <button id="map-on" class="btn btn-my buffer-top" title="Посмотреть на карте">&nbsp;<%= fa_icon('map') %>&nbsp;</button>
+      <button id="subscribe-on" class="btn btn-my buffer-both" title="Подписаться">Подписка</button>
+      <button id="comment-on" class="btn btn-my buffer-both" title="Комментарии">Коммент</button>
+      <button id="gallery-on" class="btn btn-my buffer-both" title="Фотогалерея">Фото</button>
+      <button id="map-on" class="btn btn-my buffer-both" title="Посмотреть на карте">Карта</button>
       <div id="subscribe" class="buffer-both">
         <h4>На событие подписались:</h4>
         <div class="buffer-both">
@@ -63,7 +63,7 @@
           <% end %>
         </div>
       </div>
-      <div id="comments">
+      <div id="comments" class="buffer-both">
         <%= render partial: 'comments/form',
                    locals: {comment: @new_comment || @event.comments.build} %>
 
@@ -74,14 +74,16 @@
         </div>
       </div>
 
-      <div id="gallery">
-        <div class="event-photos-gallery">
+      <div id="gallery" class="buffer-both">
+
+        <div class="buffer-both">
+          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+        </div>
+
+        <div class="buffer-both">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
 
-        <div class="event-photo-form">
-          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
-        </div>
       </div>
 
       <div class="container buffer-both">

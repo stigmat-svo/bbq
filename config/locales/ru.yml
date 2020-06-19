@@ -3,6 +3,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
 
     attributes:
       user:
@@ -21,6 +22,8 @@ ru:
           one: 'Найдена %{count} ошибка.'
           few: 'Найдены %{count} ошибки.'
           many: 'Найдено %{count} ошибок.'
+      photo:
+        photo: 'Загрузите фотографию в формате jpg, jpeg, gif, png:'
 
   controllers:
     events:

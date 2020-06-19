@@ -1,5 +1,19 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
-
-  Добавил <%= render partial: 'users/user', object: photo.user %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 my-foto">
+      <div class="buffer-both">
+        <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, target: '_blank' %>
+      </div>
+      <p class="buffer-both">
+        <%= render partial: 'users/user', object: photo.user %>
+      </p>
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3"></div>
+  </div>
 </div>
+
+
