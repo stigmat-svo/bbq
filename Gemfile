@@ -17,6 +17,7 @@ gem "font-awesome-rails"
 gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :production do
   gem 'pg'
