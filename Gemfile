@@ -16,6 +16,7 @@ gem 'rails-i18n'
 gem "font-awesome-rails"
 gem 'tzinfo-data'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'rmagick'
 gem 'fog-aws'
 

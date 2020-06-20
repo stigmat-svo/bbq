@@ -1,0 +1,6 @@
+production:
+  cloud_name: "party-point"
+  api_key: "857225236684446"
+  api_secret: "mT2qQ_tV7BHR1JxHawoM50txwPI"
+  secure: true
+  cdn_subdomain: true
