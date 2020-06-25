@@ -18,6 +18,7 @@ gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'sendgrid'
 #gem 'slim-rails'
 
 group :production do
