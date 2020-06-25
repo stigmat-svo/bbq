@@ -104,9 +104,9 @@ Rails.application.configure do
 
   # Настройки для Sendgrid
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
+    :address        => 'smtp.gmail.com',
     :port           =>  587,
-    #:domain         => 'party-point.herokuapp.com',
+    :domain         => 'gmail.com',
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
