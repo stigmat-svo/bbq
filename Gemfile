@@ -18,6 +18,7 @@ gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+#gem 'slim-rails'
 
 group :production do
   gem 'pg'

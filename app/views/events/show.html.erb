@@ -45,9 +45,9 @@
       <button id="comment-on" class="btn btn-my buffer-both" title="Комментарии">Коммент</button>
       <button id="gallery-on" class="btn btn-my buffer-both" title="Фотогалерея">Фото</button>
       <button id="map-on" class="btn btn-my buffer-both" title="Посмотреть на карте">Карта</button>
-      <div id="subscribe" class="buffer-both">
+      <div id="subscribe" class="buffer-top">
         <h4>На событие подписались:</h4>
-        <div class="buffer-both">
+        <div class="buffer-top">
           <p>
             <%= render partial: 'subscriptions/subscription',
                        collection: @event.subscriptions.except(@new_subscription) %>
@@ -63,30 +63,30 @@
           <% end %>
         </div>
       </div>
-      <div id="comments" class="buffer-both">
+      <div id="comments" class="buffer-top">
         <%= render partial: 'comments/form',
                    locals: {comment: @new_comment || @event.comments.build} %>
 
         <h3>Комментарии:</h3>
-        <div class="buffer-both">
+        <div class="buffer-top">
           <%= render partial: 'comments/comment',
                      collection: @event.comments.except(@new_comment) %>
         </div>
       </div>
 
-      <div id="gallery" class="buffer-both">
+      <div id="gallery" class="buffer-top">
 
-        <div class="buffer-both">
+        <div class="buffer-top">
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>
 
-        <div class="buffer-both">
+        <div class="buffer-top">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
 
       </div>
 
-      <div class="container buffer-both">
+      <div class="container buffer-top">
         <div class="row">
           <div id="map">
             <iframe class="my-map" src="https://yandex.ua/map-widget/v1/?um=constructor%3A1f1afa66648866f701cc2842607ae8124ed20e95aff59eca71a0ae9fef3691de&amp;
@@ -99,8 +99,7 @@
 
 
     <div class="col-md-3"></div>
-    <div class="col-md-3">
-    </div>
+    <div class="col-md-3"></div>
 
   </div>
 </div>

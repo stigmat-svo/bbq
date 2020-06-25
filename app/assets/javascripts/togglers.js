@@ -1,5 +1,5 @@
 $(".event-tools").ready(function(){
-  $('#subscribe').show()
+  $('#subscribe').hide()
   $('#subscribe-on').click(function(){
     $('#subscribe').slideToggle(500);
     $('#comments').hide()
@@ -8,7 +8,7 @@ $(".event-tools").ready(function(){
     return false;
   });
 
-  $('#comments').hide()
+  $('#comments').show()
   $('#comment-on').click(function(){
     $('#comments').slideToggle(500);
     $('#subscribe').hide()
