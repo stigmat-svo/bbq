@@ -93,24 +93,20 @@ Rails.application.configure do
   # ПРОПИСЫВАЙТЕ свой!
   config.action_mailer.default_url_options = {host: 'party-point.herokuapp.com'}
 
-  # Вываливать ли посетителю сайта ошибки при отправке писем
   config.action_mailer.raise_delivery_errors = false
 
-  # Делать рассылку писем (если false — мэйлер только имитирует работу, реальных писем не уходит)
-  config.action_mailer.perform_deliveries = true
-
-  # отправка почты по протоколу SMTP
   config.action_mailer.delivery_method = :smtp
 
-  # Настройки для Sendgrid
-  ActionMailer::Base.smtp_settings = {
-    address:         'smtp.sendgrid.net',
-    port:            '587',
-    authentication:  :plain,
-    user_name:        ENV['SENDGRID_USERNAME'],
-    password:         ENV['SENDGRID_PASSWORD'],
-    domain:          'heroku.com',
-    enable_starttls_auto:  true
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'party-point.herokuapp.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   # Inserts middleware to perform automatic connection switching.
