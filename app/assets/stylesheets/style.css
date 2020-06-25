@@ -53,14 +53,14 @@
 }
 
 .my-topper {
-  border-bottom: 1px solid #89beff;
+  border-bottom: 1px solid rgba(137, 190, 255, 0.6);
   margin-top: 200px;
 }
 
 .my-map {
   width: 573px;
   height: 403px;
-  border: 1px solid #89beff;
+  border: 1px solid rgba(137, 190, 255, 0.6);
 }
 
 .my-comment {
@@ -81,7 +81,8 @@
 
 .my-foto {
   margin-bottom: 10px;
-  border: 1px solid #89beff;
+  border: 1px solid rgba(137, 190, 255, 0.6);
+  border-radius: 5px;
 }
 
 .visit {
