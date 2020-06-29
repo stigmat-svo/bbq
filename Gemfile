@@ -18,7 +18,8 @@ gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-#gem 'slim-rails'
+# gem 'sass-rails'
+# gem 'uglifier'
 
 group :production do
   gem 'pg'

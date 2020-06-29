@@ -2,8 +2,7 @@
   <%= render partial: 'partials/form_errors', locals: {model: comment}, class: "alert alert-danger", role: "alert" %>
 
   <div class="form-group">
-    <%= f.label 'Оставить комментарий' %>
-    <%= f.text_area :body, class: 'form-control my-comment' %>
+    <%= f.text_area :body, class: 'form-control my-comment', placeholder: 'Написать комментарий...' %>
   </div>
 
   <% unless user_signed_in? %>
