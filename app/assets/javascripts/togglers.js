@@ -8,7 +8,7 @@ $(".event-tools").ready(function(){
     return false;
   });
 
-  $('#comments').show()
+  $('#comments').hide()
   $('#comment-on').click(function(){
     $('#comments').slideToggle(500);
     $('#subscribe').hide()
@@ -26,7 +26,7 @@ $(".event-tools").ready(function(){
     return false;
   });
 
-  $('#map').hide()
+  $('#map').show()
   $('#map-on').click(function(){
     $('#map').slideToggle(500);
     $('#subscribe').hide()
