@@ -29,30 +29,21 @@
       </div>
     </div>
 
-    <div class="col-md-3 my-top">
+    <div class="col-md-3 buffer-top">
       <div class="text-center">
         <h4>Приглашение от:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
     </div>
-    <div class="col-md-3 my-top">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6 event-tools">
-      <button id="subscribe-on" class="btn btn-my buffer-both" title="Подписаться">Подписка</button>
-      <button id="comment-on" class="btn btn-my buffer-both" title="Комментарии">Коммент</button>
-      <button id="gallery-on" class="btn btn-my buffer-both" title="Фотогалерея">Фото</button>
-      <button id="map-on" class="btn btn-my buffer-both" title="Посмотреть на карте">Карта</button>
-      <div id="subscribe" class="buffer-top">
+    <div class="col-md-3 buffer-both">
+      <div id="subscribe" class="text-center">
         <h4>На событие подписались:</h4>
-        <div class="buffer-top">
-          <p>
-            <%= render partial: 'subscriptions/subscription',
-                       collection: @event.subscriptions.except(@new_subscription) %>
-          </p>
-        </div>
+
+        <p>
+          <%= render partial: 'subscriptions/subscription',
+                     collection: @event.subscriptions.except(@new_subscription) %>
+        </p>
+
         <div>
           <% unless current_user_can_edit?(@event) || @event.subscribers.include?(current_user) %>
             <div>
@@ -63,20 +54,13 @@
           <% end %>
         </div>
       </div>
-      <div id="comments" class="buffer-top">
-        <%= render partial: 'comments/form',
-                   locals: {comment: @new_comment || @event.comments.build} %>
+    </div>
+  </div>
 
-        <h3>Комментарии:</h3>
-        <div class="buffer-top">
-          <%= render partial: 'comments/comment',
-                     collection: @event.comments.except(@new_comment) %>
-        </div>
-      </div>
-
+  <div class="row">
+    <div class="col-md-6 event-tools">
       <div id="gallery" class="buffer-top">
-
-        <div class="buffer-top">
+        <div>
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>
 
@@ -86,19 +70,29 @@
 
       </div>
 
-
-        <div class="">
-          <div id="map" data-address="<%= @event.address %>" class="my-map">
-          </div>
+      <div class="buffer-both">
+        <div id="map" data-address="<%= @event.address %>" class="my-map">
         </div>
       </div>
 
+      <button id="gallery-on" class="btn btn-my buffer-both" title="Фотогалерея">Фотогалерея</button>
+      <button id="map-on" class="btn btn-my buffer-both" title="Посмотреть на карте">Карта</button>
 
+    </div>
+
+    <div class="col-md-6">
+      <div id="comments" class="buffer-top">
+        <%= render partial: 'comments/form',
+                   locals: {comment: @new_comment || @event.comments.build} %>
+
+        <div class="buffer-top">
+          <%= render partial: 'comments/comment',
+                     collection: @event.comments.except(@new_comment) %>
+        </div>
+      </div>
+    </div>
   </div>
 
-
-  <div class="col-md-3"></div>
-  <div class="col-md-3"></div>
 
 </div>
 
