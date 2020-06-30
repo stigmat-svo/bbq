@@ -7,7 +7,6 @@
 <% end %>
 
 <div class="event">
-  <%= link_to 'На главную', root_path, class: 'btn btn-my' %>
   <div class="row pad">
     <div class="col-md-6 buffer-top">
       <%= content_tag 'div', '', class: 'event-background',
@@ -85,6 +84,7 @@
 
       <button id="gallery-on" class="btn btn-my buffer-both" title="Фотогалерея">Фотогалерея</button>
       <button id="map-on" class="btn btn-my buffer-both" title="Посмотреть на карте">Карта</button>
+      <%= link_to 'На главную', root_path, class: 'btn btn-my' %>
 
     </div>
 
