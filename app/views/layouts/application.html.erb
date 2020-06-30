@@ -11,14 +11,12 @@
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+  <%= yield :js_onpage %>
+
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag "application", :media => "all" %>
-
-  <script
-    src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=37741879-4200-4e7c-86ed-90560e23e527"
-    type="text/javascript"
-  ></script>
 
   <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
