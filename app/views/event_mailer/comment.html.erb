@@ -1,11 +1,9 @@
 <h1><%= t '.title' %></h1>
-<p><%= @comment.body %></p>
+<h2><%= @comment.body %></h2>
 <p><%= t '.author' %>: <strong><%= @comment.user_name %></strong></p>
 
-<hr/>
-
 <%= t '.event' %>
-<h3><%= @event.title %></h3>
+<h3><%= link_to @event.title, event_url(@event) %></h3>
 
 <%= t '.datetime' %>
 <h4><%= l @event.datetime %></h4>
