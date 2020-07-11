@@ -1,29 +1,33 @@
-<%= form_for [@event, photo], html: { multipart: true } do |f| %>
+<%= form_for [@event, photo], html: {multipart: true} do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: photo}, class: "alert alert-danger", role: "alert" %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 my-foto">
-      <div class="buffer-both">
-        <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, target: '_blank' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 my-foto">
+        <div class="buffer-both">
+          <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
 
-        &nbsp;
-        <% if current_user_can_edit?(photo) %>
-          <%= link_to fa_icon('trash-o'), event_photo_path(photo.event, photo),
-                      method: :delete, data: {confirm: t('.destroy_confirm')}
-          %>
-        <% end %>
+          <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+              toggle: 'lightbox', title: image_title, gallery: 'event-photos'
+          } %>
+
+          &nbsp;
+          <% if current_user_can_edit?(photo) %>
+            <%= link_to fa_icon('trash-o'), event_photo_path(photo.event, photo),
+                        method: :delete, data: {confirm: t('.destroy_confirm')}
+            %>
+          <% end %>
+        </div>
+
+        <p class="buffer-both">
+          <%= render partial: 'users/user', object: photo.user %>
+        </p>
       </div>
-
-      <p class="buffer-both">
-        <%= render partial: 'users/user', object: photo.user %>
-      </p>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3"></div>
     </div>
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-3"></div>
   </div>
-</div>
 <% end %>

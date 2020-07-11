@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+gem 'sass-rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'twitter-bootstrap-rails'
 gem 'uglifier'
@@ -18,8 +19,7 @@ gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-# gem 'sass-rails'
-# gem 'uglifier'
+#gem 'lightbox2-rails'
 
 group :production do
   gem 'pg'
