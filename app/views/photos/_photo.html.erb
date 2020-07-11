@@ -6,7 +6,15 @@
     <div class="col-md-3 my-foto">
       <div class="buffer-both">
         <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, target: '_blank' %>
+
+        &nbsp;
+        <% if current_user_can_edit?(photo) %>
+          <%= link_to fa_icon('trash-o'), event_photo_path(photo.event, photo),
+                      method: :delete, data: {confirm: t('.destroy_confirm')}
+          %>
+        <% end %>
       </div>
+
       <p class="buffer-both">
         <%= render partial: 'users/user', object: photo.user %>
       </p>

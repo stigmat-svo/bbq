@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'pupa.programmer@gmail.com'
+  default from: 'PARTY POINT'
 
   layout 'mailer'
 end

@@ -66,7 +66,7 @@
 .my-comment {
   border: 1px solid rgba(137, 190, 255, 0.6);
   border-radius: 5px;
-  padding-left: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -96,6 +96,7 @@
   -webkit-box-shadow: 0px 0px 15px 5px rgba(217,193,201,0.72);
   box-shadow: 0px 0px 25px 3px rgba(217,193,201,0.72);
 }
+
 
 
 @media all and (max-width: 480px) {

@@ -1,0 +1,12 @@
+Новая фотография
+----
+
+Имя: <%= @name %>
+Email: <%=  @email %>
+
+----------------------
+<%= @photo.photo.url %>
+
+Событие: <%= @event.title %>
+Состоится: <%= l @event.datetime %>
+Организатор: <%= @event.user.name %>

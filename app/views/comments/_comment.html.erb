@@ -1,5 +1,4 @@
-<div class="buffer-both my-comment">
-  <div class="buffer-both">
+<div class="my-comment buffer-top">
     <span>
       <% if comment.user.present? %>
         <%= render partial: 'users/user', object: comment.user %>
@@ -8,16 +7,16 @@
       <% end %>
     </span>&nbsp;
 
-    <h4><b><%= comment.body %></b></h4>
+  <h4><b><%= comment.body %></b></h4>
 
-    <em><%= l comment.created_at, format: :long %></em>&nbsp;&nbsp;
-    <% if current_user_can_edit?(comment) %>
-      <%= link_to fa_icon('trash-o'), event_comment_path(comment.event, comment),
-                  method: :delete, data: {confirm: t('.destroy_confirm')}
-      %>
-    <% end %>
-  </div>
+  <em><%= l comment.created_at, format: :long %></em>&nbsp;&nbsp;
+  <% if current_user_can_edit?(comment) %>
+    <%= link_to fa_icon('trash-o'), event_comment_path(comment.event, comment),
+                method: :delete, data: {confirm: t('.destroy_confirm')}
+    %>
+  <% end %>
 </div>
+
 
 
 
