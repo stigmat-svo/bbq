@@ -20,10 +20,11 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox2-rails'
-gem 'rails_12factor', group: :production
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 
