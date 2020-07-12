@@ -9,6 +9,6 @@
 //= require twitter/bootstrap
 //= require togglers
 //= require flash_out
-
+//= require lightbox
 //= require_tree .
 

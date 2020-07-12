@@ -19,7 +19,7 @@ gem 'tzinfo-data'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-#gem 'lightbox2-rails'
+gem 'lightbox2-rails'
 
 group :production do
   gem 'pg'
