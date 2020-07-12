@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox2-rails'
+gem 'rails_12factor', group: :production
 
 group :production do
   gem 'pg'
