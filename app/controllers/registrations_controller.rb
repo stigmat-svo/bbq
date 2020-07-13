@@ -2,12 +2,13 @@ class RegistrationsController < Devise::RegistrationsController
   prepend_before_action :check_captcha, only: [:create] # Change this to be any actions you want to protect.
 
   private
+
   def check_captcha
-    unless verify_recaptcha
-      self.resource = resource_class.new sign_up_params
-      resource.validate # Look for any other validation errors besides reCAPTCHA
-      set_minimum_password_length
-      respond_with_navigational(resource) { render :new }
+    @user = User.new(params[:user].permit(:name))
+    if verify_recaptcha(model: @user) && @user.save
+      redirect_to @user
+    else
+      render 'new'
     end
   end
   # before_action :configure_sign_up_params, only: [:create]
