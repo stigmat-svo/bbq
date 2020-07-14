@@ -4,11 +4,11 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def check_captcha
-    @user = User.new(params[:user].permit(:name))
-    if verify_recaptcha(model: @user) && @user.save
-      redirect_to @user
-    else
-      render 'new'
+    unless verify_recaptcha
+      self.resource = resource_class.new sign_up_params
+      resource.validate
+      set_minimum_password_length
+      respond_with_navigational(resource) { render :new }
     end
   end
   # before_action :configure_sign_up_params, only: [:create]
