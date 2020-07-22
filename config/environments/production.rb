@@ -113,25 +113,15 @@ Rails.application.configure do
   #}
 
   # Настройки для Sendgrid
-  # ActionMailer::Base.smtp_settings = {
-  #   :user_name => ENV['SENDGRID_USERNAME'],
-  #   :password => ENV['SENDGRID_PASSWORD'],
-  #   :address => 'smtp.sendgrid.net',
-  #   :port => '587',
-  #   :authentication => :plain,
-  #   :enable_starttls_auto => true
-  # }
-
-  #№2
   ActionMailer::Base.smtp_settings = {
-    address:         'smtp.sendgrid.net',
-    port:            '587',
-    authentication:  :plain,
-    user_name:        Rails.application.credentials.dig(:sendgrid, :SENDGRID_USERNAME),
-    password:         Rails.application.credentials.dig(:sendgrid, :SENDGRID_PASSWORD),
-    domain:          'heroku.com',
-    enable_starttls_auto:  true
-  }
+     :user_name => ENV['SENDGRID_USERNAME'],
+     :password => ENV['SENDGRID_PASSWORD'],
+     :address => 'smtp.sendgrid.net',
+     :port => '587',
+     :authentication => :plain,
+     :enable_starttls_auto => true
+ }
+
 
   # config.assets.css_compressor = :yui
   # config.assets.js_compressor = :uglifier
