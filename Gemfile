@@ -20,6 +20,7 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox2-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
+gem 'sendgrid'
 
 group :production do
   gem 'pg'
