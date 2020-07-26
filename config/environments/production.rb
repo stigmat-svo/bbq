@@ -114,13 +114,13 @@ Rails.application.configure do
 
   # Настройки для Sendgrid
   ActionMailer::Base.smtp_settings = {
-     :user_name => ENV['SENDGRID_USERNAME'],
-     :password => ENV['SENDGRID_PASSWORD'],
-     :address => 'smtp.sendgrid.net',
-     :port => '587',
-     :authentication => :plain,
-     :enable_starttls_auto => true
- }
+  :address => "smtp.sendgrid.net",
+  :port => 587,
+  :domain => "heroku.com",
+  :authentication => :plain,
+  :user_name => "sendgrd_username",
+  :password => "sendgrid_password"
+}
 
 
   # config.assets.css_compressor = :yui
