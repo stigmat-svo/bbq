@@ -103,24 +103,24 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   # Настройки для работы через GMail аккаунт
-  #config.action_mailer.smtp_settings = {
-   # address: 'smtp.gmail.com',
-   # port: '587',
-   # user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
-   # password: 'a1915291', # не храните здесь пароль!
-   # authentication: 'plain',
-   # enable_starttls_auto: true
-  #}
+  config.action_mailer.smtp_settings = {
+   address: 'smtp.gmail.com',
+   port: '587',
+   user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
+   password: 'a1915291', # не храните здесь пароль!
+   authentication: 'plain',
+   enable_starttls_auto: true
+  }
 
-  # Настройки для Sendgrid
-  ActionMailer::Base.smtp_settings = {
-  :address => "smtp.sendgrid.net",
-  :port => 587,
-  :domain => "heroku.com",
-  :authentication => :plain,
-  :user_name => "sendgrd_username",
-  :password => "sendgrid_password"
-}
+#   # Настройки для Sendgrid
+#   ActionMailer::Base.smtp_settings = {
+#   :address => "smtp.sendgrid.net",
+#   :port => 587,
+#   :domain => "heroku.com",
+#   :authentication => :plain,
+#   :user_name => "sendgrd_username",
+#   :password => "sendgrid_password"
+# }
 
 
   # config.assets.css_compressor = :yui
