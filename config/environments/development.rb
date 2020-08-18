@@ -72,7 +72,7 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
-    password: 'a1915291', # не храните здесь пароль!
+    password: 'ttwxzevvwxpheerc', # не храните здесь пароль!
     authentication: 'plain',
     enable_starttls_auto: true
   }
