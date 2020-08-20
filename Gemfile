@@ -21,7 +21,7 @@ gem 'fog-aws'
 gem 'lightbox2-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'sendgrid'
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'
 
 group :production do
   gem 'pg'
