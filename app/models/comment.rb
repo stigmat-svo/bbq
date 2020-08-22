@@ -2,6 +2,8 @@ class Comment < ActiveRecord::Base
   belongs_to :event
   belongs_to :user, optional: true
 
+  default_scope -> { order('created_at DESC') }
+
   validates  :event, presence: true
   validates :body, presence: true
 
