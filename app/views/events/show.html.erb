@@ -42,10 +42,8 @@
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
     </div>
-    <div class="col-md-3 buffer-both">
+    <div class="col-md-3 buffer-top">
       <div id="subscribe" class="text-center">
-        <h4>На событие подписались:</h4>
-
         <p>
           <%= render partial: 'subscriptions/subscription',
                      collection: @event.subscriptions.except(@new_subscription) %>

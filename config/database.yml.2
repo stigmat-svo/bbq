@@ -1,0 +1,8 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: stigmat
+  password: 0000
+production:
+  <<: *default
+  database: party-point

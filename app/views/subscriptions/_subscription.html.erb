@@ -1,5 +1,6 @@
-<div class="buffer-top">
+<div>
   <span class="subscription">
+    <h4>На событие подписались:</h4>
   <% if subscription.user.present? %>
     <%= render partial: 'users/user', object: subscription.user %>
   <% else %>

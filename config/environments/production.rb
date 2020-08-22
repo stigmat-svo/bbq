@@ -91,7 +91,7 @@ Rails.application.configure do
 
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
-  config.action_mailer.default_url_options = {host: 'party-point.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'party-point.ru'}
 
   # Вываливать ли посетителю сайта ошибки при отправке писем
   config.action_mailer.raise_delivery_errors = false
