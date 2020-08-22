@@ -1,16 +1,16 @@
 <%= form_for [@event, comment] do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: comment}, class: "alert alert-danger", role: "alert" %>
 
-  <div class="form-group">
-    <%= f.text_area :body, class: 'form-control my-comment', placeholder: 'Написать комментарий...' %>
-  </div>
-
   <% unless user_signed_in? %>
     <div class="form-group">
       <%= f.label 'Ваше имя:' %>
       <%= f.text_field :user_name, class: 'form-control' %>
     </div>
   <% end %>
+
+  <div class="form-group">
+    <%= f.text_area :body, class: 'form-control my-comment', placeholder: 'Написать комментарий...' %>
+  </div>
 
   <div class="actions">
     <%= f.submit 'Отправить', class: 'btn btn-my' %>
