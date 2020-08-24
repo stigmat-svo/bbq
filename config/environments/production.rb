@@ -115,7 +115,7 @@ Rails.application.configure do
    #password: 'rudodxjobolpjmqk', # не храните здесь пароль!
    #authentication: 'plain',
   # enable_starttls_auto: true
-  }
+  #}
 
 #   # Настройки для Sendgrid
 #   ActionMailer::Base.smtp_settings = {
