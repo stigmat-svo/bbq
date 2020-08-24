@@ -66,7 +66,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.delivery_method = :sendmail
+  #config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = {host: 'party-point.ru'}
 
@@ -105,17 +105,17 @@ Rails.application.configure do
   #config.action_mailer.perform_deliveries = true
 
   # отправка почты по протоколу SMTP
-  #config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   # Настройки для работы через GMail аккаунт
-   #config.action_mailer.smtp_settings = {
-  # address: 'smtp.gmail.com',
-   #port: '587',
-   #user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
-   #password: 'rudodxjobolpjmqk', # не храните здесь пароль!
-   #authentication: 'plain',
-  # enable_starttls_auto: true
-  #}
+   config.action_mailer.smtp_settings = {
+   address: 'smtp.gmail.com',
+   port: '587',
+   user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
+   password: 'rudodxjobolpjmqk', # не храните здесь пароль!
+   authentication: 'plain',
+   enable_starttls_auto: true
+  }
 
 #   # Настройки для Sendgrid
 #   ActionMailer::Base.smtp_settings = {
