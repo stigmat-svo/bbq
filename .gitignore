@@ -54,4 +54,4 @@ sendgrid.env
 yarn-debug.log*
 .yarn-integrity
 /config/database.yml
-/config/database.yml.3
+/config/secrets.yml
