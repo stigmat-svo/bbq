@@ -66,6 +66,11 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {host: 'party-point.ru'}
+
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
@@ -91,16 +96,16 @@ Rails.application.configure do
 
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
-  config.action_mailer.default_url_options = {host: 'party-point.ru'}
+  #config.action_mailer.default_url_options = {host: 'party-point.ru'}
 
   # Вываливать ли посетителю сайта ошибки при отправке писем
   config.action_mailer.raise_delivery_errors = false
 
   # Делать рассылку писем (если false — мэйлер только имитирует работу, реальных писем не уходит)
-  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.perform_deliveries = true
 
   # отправка почты по протоколу SMTP
-  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :smtp
 
   # Настройки для работы через GMail аккаунт
   config.action_mailer.smtp_settings = {
