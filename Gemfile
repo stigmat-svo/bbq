@@ -20,7 +20,6 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox2-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
-gem 'sendgrid'
 gem 'dotenv-rails'
 
 group :production do
@@ -28,6 +27,13 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
