@@ -119,12 +119,12 @@ Rails.application.configure do
 
 #   # Настройки для Sendgrid
   #   # Настройки для Sendgrid
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => 587,
     :authentication => :plain,
-    :user_name      => 'd32ZIbGnT7WppmGTco9G2g',
-    :password       => 'SG.d32ZIbGnT7WppmGTco9G2g.bpYG2LLrtBCT7_qA68B2-9Zn62PG2JbCTg7qPFOncec',
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
     :domain         => 'party-point.ru',
     :enable_starttls_auto => true
   }
