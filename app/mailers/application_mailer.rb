@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'PARTY POINT'
+  default from: 'support@party-point.ru'
 
   layout 'mailer'
 end
