@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Prepend all log lines with the following tags.
   config.log_tags = [:request_id]
@@ -108,24 +108,29 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   # Настройки для работы через GMail аккаунт
-   config.action_mailer.smtp_settings = {
-   address: 'smtp.gmail.com',
-   port: '587',
-   user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
-   password: 'rudodxjobolpjmqk', # не храните здесь пароль!
-   authentication: 'plain',
-   enable_starttls_auto: true
-  }
+  #  config.action_mailer.smtp_settings = {
+  #  address: 'smtp.gmail.com',
+  #  port: '587',
+  #  user_name: 'pupa.programmer', # не используйте для тестов свои реальные ящики
+  #  password: 'rudodxjobolpjmqk', # не храните здесь пароль!
+  #  authentication: 'plain',
+  #  enable_starttls_auto: true
+  # }
 
 #   # Настройки для Sendgrid
-#   ActionMailer::Base.smtp_settings = {
-#   :address => "smtp.sendgrid.net",
-#   :port => 587,
-#   :domain => "heroku.com",
-#   :authentication => :plain,
-#   :user_name => "sendgrd_username",
-#   :password => "sendgrid_password"
-# }
+  #   # Настройки для Sendgrid
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => 587,
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'party-point.ru',
+    :enable_starttls_auto => true
+  }
+
+  config.active_job.queue_adapter = :resque
+  config.active_job.queue_name_prefix = "party-point_#{Rails.env}"
 
 
   # config.assets.css_compressor = :yui

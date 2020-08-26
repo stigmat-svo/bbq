@@ -19,8 +19,12 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox2-rails'
+gem 'therubyracer'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'dotenv-rails'
+gem 'pundit'
+gem 'resque'
+gem 'sendgrid-ruby'
 
 group :production do
   gem 'pg'
@@ -32,11 +36,15 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
+  gem 'letter_opener'
 end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

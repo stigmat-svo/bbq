@@ -65,8 +65,9 @@ Rails.application.configure do
 
   # отправка почты по протоколу SMTP
   config.action_mailer.delivery_method = :smtp
+    #:letter_opener
 
-  # Настройки для работы через GMail аккаунт
+  #Настройки для работы через GMail аккаунт
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
@@ -76,4 +77,9 @@ Rails.application.configure do
     authentication: 'plain',
     enable_starttls_auto: true
   }
+
+
+
+  config.active_job.queue_adapter = :async
+  config.active_job.queue_name_prefix = "party-point_#{Rails.env}"
 end
