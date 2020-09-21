@@ -21,8 +21,8 @@ FileUtils.chdir APP_ROOT do
   # system('bin/yarn')
 
   # puts "\n== Copying sample files =="
-  # unless File.exist?('config/database.yml.sample.2.3.2')
-  #   FileUtils.cp 'config/database.yml.sample.2.3.2.sample', 'config/database.yml.sample.2.3.2'
+  # unless File.exist?('config/database.yml.sample.resample.sample.2.3.2')
+  #   FileUtils.cp 'config/database.yml.sample.resample.sample.2.3.2.sample', 'config/database.yml.sample.resample.sample.2.3.2'
   # end
 
   puts "\n== Preparing database =="
